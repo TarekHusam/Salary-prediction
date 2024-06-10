@@ -5,7 +5,7 @@ import numpy as np
 
 def load_model():
     
-    data = joblib.load(open("saved_steps.pkl", "rb"))
+    data = joblib.load(open("saved_steps.joblib", "rb"))
     return data
 
 data = load_model()
