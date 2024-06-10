@@ -4,8 +4,8 @@ import numpy as np
 
 
 def load_model():
-    with open('saved_steps.joblib', 'rb') as file:
-        data = joblib.load(file)
+    
+    data = joblib.load(open("saved_steps.pkl", "rb"))
     return data
 
 data = load_model()
