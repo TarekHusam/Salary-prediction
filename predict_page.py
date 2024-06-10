@@ -1,15 +1,14 @@
 import streamlit as st
-import joblib
+import pickle
 import numpy as np
 
 
 def load_model():
-    data = joblib.load('saved_steps.joblib')
+    with open('saved_steps.pkl', 'rb') as file:
+        data = pickle.load(file)
     return data
 
 data = load_model()
-
-
 
 regressor = data["model"]
 preprocessor = data["preprocessor"]
@@ -60,3 +59,7 @@ def show_predict_page():
         X_transformed = preprocessor.transform(X)
         salary = regressor.predict(X_transformed)
         st.subheader(f"The estimated salary is ${salary[0]:,.2f}")
+
+# To run the Streamlit app, include this line at the end of your script
+if __name__ == "__main__":
+    show_predict_page()
