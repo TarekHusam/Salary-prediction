@@ -32,7 +32,7 @@ def clean_education(x):
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("https://rawhi-my.sharepoint.com/:x:/g/personal/tarek_rawhi_jo/ERnVbA6erT5BsaDyJwKkuHcBPI6qVu8_E2gph0nRIC7I0g?e=Y6YroS")
+    df = pd.read_csv("https://docs.google.com/spreadsheets/d/1gxPzxthgtyF3PZYUotBeLrYIbekIRuvT/edit?usp=sharing&ouid=100284731583764541199&rtpof=true&sd=true")
     df = df[["Country", "EdLevel", "YearsCodePro", "Employment", "ConvertedComp"]]
     df = df[df["ConvertedComp"].notnull()]
     df = df.dropna()
