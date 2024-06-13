@@ -3,6 +3,13 @@ from predict_page import show_predict_page
 from explore_page import show_explore_page
 
 
+st.set_page_config(
+    page_title="Football Match Predictor",
+  
+    layout="wide",
+    initial_sidebar_state="expanded"
+    )
+
 page = st.sidebar.selectbox("Explore Or Predict", ("Predict", "Explore"))
 
 if page == "Predict":
