@@ -4,7 +4,7 @@ from explore_page import show_explore_page
 
 
 st.set_page_config(
-    page_title="Football Match Predictor",
+    page_title="Software Developer Salary Prediction",
   
     layout="wide",
     initial_sidebar_state="expanded"
